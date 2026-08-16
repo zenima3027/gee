@@ -28,66 +28,66 @@ const SLIDES = [
   },
   {
     photo: "assets/photos/1.jpg",
-    caption: "ily my rithu",
+    caption: "ily my rithu"
   },
   {
     photo: "assets/photos/2.jpg",
-    caption: "<3",
+    caption: "<3"
   },
   {
     photo: "assets/photos/3.jpg",
-    caption: "<3",
+    caption: "<3"
   },
   {
     photo: "assets/photos/4.jpg",
-    caption: "<3",
+    caption: "<3"
   },
   {
     photo: "assets/photos/5.jpg",
-    caption: "<3",
+    caption: "<3"
   },
   {
     photo: "assets/photos/6.jpg",
-    caption: "<3",
+    caption: "<3"
   },
   {
     photo: "assets/photos/7.jpg",
-    caption: "<3",
+    caption: "<3"
   },
   {
     photo: "assets/photos/8.jpg",
-    caption: "<3",
+    caption: "<3"
   },
   {
     photo: "assets/photos/9.jpg",
-    caption: "<3",
+    caption: "<3"
   },
   {
     photo: "assets/photos/10.jpg",
-    caption: "<3",
+    caption: "<3"
   },
   {
     photo: "assets/photos/11.jpg",
-    caption: "<3",
+    caption: "<3"
   },
   {
     photo: "assets/photos/12.jpg",
-    caption: "<3",
+    caption: "<3"
   },
   {
     photo: "assets/photos/13.jpg",
-    caption: "<3",
+    caption: "<3"
   },
   {
     photo: "assets/photos/14.jpg",
-    caption: "<3",
+    caption: "<3"
   },
   {
-    // final slide — no photo needed, just a closing message
+    // final slide
     photo: "assets/photos/unnamed.jpg",
     caption: "HAPPY BIRTHDAY MY GARIMA<3",
     heading: "ALWAYS<3,",
-    text: "Your rithu rozen. ♡",
+    text: "Your rithu rozen. \u2661",
     final: true
   }
 ];
