@@ -31,11 +31,11 @@ const SLIDES = [
     caption: "ily my rithu"
   },
   {
-    photo: "assets/photos/2.jpg",
+    photo: "assets/photos/2.jpeg",
     caption: "<3"
   },
   {
-    photo: "assets/photos/3.jpg",
+    photo: "assets/photos/3.jpeg",
     caption: "<3"
   },
   {
