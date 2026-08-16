@@ -28,59 +28,73 @@ const SLIDES = [
   },
   {
     photo: "assets/photos/1.jpg",
-    caption: "ily my rithu"
+    caption: "ily my rithu",
+    text: "RITHU",
   },
   {
     photo: "assets/photos/2.jpeg",
-    caption: "<3"
+    caption: "<3",
+     text: "RITHU I LOVE YOU",
   },
   {
     photo: "assets/photos/3.jpeg",
-    caption: "<3"
+    caption: "<3",
+     text: "RITHU I LOVE YOU MOREEEEEE",
   },
   {
     photo: "assets/photos/4.jpg",
-    caption: "<3"
+    caption: "<3",
+     text: "RITHU TOO BAD I LOVE YOU MOREEEE",
   },
   {
     photo: "assets/photos/5.jpg",
-    caption: "<3"
+    caption: "<3",
+     text: "RITHU RITHU RITHU RITHU RITHU RHITUUUUUUUU I LOVE YOUUUUU",
   },
   {
     photo: "assets/photos/6.jpg",
-    caption: "<3"
+    caption: "<3",
+     text: "RITHU GARIMAAAAAAA I LOVE YOUUUUUUU",
   },
   {
     photo: "assets/photos/7.jpg",
-    caption: "<3"
+    caption: "<3",
+     text: "HAPPPPPPYYY BIRTHDAYYYYYYYYYYYYYYYYYYYY RITHU , PUSHING 30 YOU PANI ATPPPP",
   },
   {
     photo: "assets/photos/8.jpg",
-    caption: "<3"
+    caption: "<3",
+     text: "FATYYYY GARIMAAA I LOVE YOUUUUUU",
   },
   {
     photo: "assets/photos/9.jpg",
-    caption: "<3"
+    caption: "<3",
+     text: "APKO DEHRAI DEHRAIIII MAYAAA CHAAA I LOVE YOUUUUUU",
   },
   {
     photo: "assets/photos/10.jpg",
-    caption: "<3"
+    caption: "<3",
+     text: "RITHU GANG I LOVE YOUUUUUU , HEHEHEHE OMG IT`S GARIMA KO BDAYYYYYY EHHEHEHEE I LOVE YOUUUUUUUU",
   },
   {
     photo: "assets/photos/11.jpg",
-    caption: "<3"
+    caption: "<3",
+     text: "RITHU BOSSSS, OR MORE LIKE HOW PRAPTI SAYS 'GARIMA DON'",
   },
   {
     photo: "assets/photos/12.jpg",
-    caption: "<3"
+    caption: "<3",
+     text: "I LOVE YOU LOVE YOU<3",
   },
   {
     photo: "assets/photos/13.jpg",
-    caption: "<3"
+    caption: "<3",
+     text: "ROZEN LOVES YOUUU MOREEEEEE",
   },
   {
     photo: "assets/photos/14.jpg",
-    caption: "<3"
+    caption: "<3",
+     text: "LAST ONEEEE HEEEHEHEHE I LOVE YOUUUUUUUU MY 20 BARSA KO BURO NA BUROOO GIRLFRIENDDDD <3",
   },
   {
     // final slide
