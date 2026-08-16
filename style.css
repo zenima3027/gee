@@ -19,7 +19,7 @@
 *{ box-sizing: border-box; }
 
 html, body{
-  margin:0; padding:0; height:100%;
+  margin:0; padding:0; height:100%; height:100dvh;
   background: radial-gradient(ellipse at 50% 0%, var(--ink-navy) 0%, var(--ink-navy-deep) 70%);
   color: var(--paper);
   font-family: var(--font-serif);
@@ -48,24 +48,34 @@ button{ font-family: inherit; cursor: pointer; }
 }
 .particle{
   position: absolute;
-  width: 3px; height: 3px;
-  border-radius: 50%;
-  background: var(--gold-soft);
-  box-shadow: 0 0 6px 2px rgba(240,217,181,.6);
+  top: -8vh;
+  border-radius: 50% 4% 50% 4%;
   opacity: 0;
-  animation: drift linear infinite;
+  animation: petal-fall linear infinite;
+  will-change: transform, opacity;
 }
-@keyframes drift{
-  0%   { opacity: 0; transform: translateY(0) translateX(0); }
-  10%  { opacity: .8; }
-  90%  { opacity: .5; }
-  100% { opacity: 0; transform: translateY(-110vh) translateX(20px); }
+.particle.c1{ background: linear-gradient(155deg, #e3a3ac, var(--rose)); }
+.particle.c2{ background: linear-gradient(155deg, var(--gold-soft), var(--gold)); }
+.particle.c3{ background: linear-gradient(155deg, #f4cdd3, #dd8b96); }
+
+@keyframes petal-fall{
+  0%   { opacity: 0; transform: translateY(0) translateX(0) rotate(0deg); }
+  8%   { opacity: .85; }
+  25%  { transform: translateY(28vh) translateX(var(--sway1, 26px)) rotate(120deg); }
+  50%  { transform: translateY(56vh) translateX(var(--sway2, -22px)) rotate(220deg); }
+  75%  { transform: translateY(84vh) translateX(var(--sway1, 26px)) rotate(300deg); }
+  92%  { opacity: .75; }
+  100% { opacity: 0; transform: translateY(116vh) translateX(var(--sway2, -22px)) rotate(400deg); }
 }
 
 /* =========================================================
    ENVELOPE SCREEN
    ========================================================= */
-#envelope-screen{ flex-direction: column; gap: 28px; z-index: 2; }
+#envelope-screen{
+  flex-direction: column; gap: 28px; z-index: 2;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+           env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
 
 .envelope{
   position: relative;
@@ -209,9 +219,19 @@ button{ font-family: inherit; cursor: pointer; }
 }
 
 @media (max-width: 720px){
-  .slide{ flex-direction: column; padding: 90px 24px 120px; gap: 24px; justify-content: flex-start; overflow-y: auto; }
-  .polaroid{ max-width: 72vw; }
+  .slide{
+    flex-direction: column;
+    padding: max(90px, calc(env(safe-area-inset-top) + 70px)) 20px
+             max(120px, calc(env(safe-area-inset-bottom) + 100px));
+    gap: 20px;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+  .polaroid{ max-width: min(78vw, 300px); }
   .letter{ max-width: 100%; text-align: center; }
+  .letter p{ font-size: clamp(21px, 5.6vw, 30px); }
+  .nav-icon{ width: 42px; height: 42px; }
+  .nav-icon svg{ width: 18px; height: 18px; }
 }
 
 /* Nav icons */
@@ -230,12 +250,13 @@ button{ font-family: inherit; cursor: pointer; }
 .nav-icon svg{ width: 20px; height: 20px; }
 .nav-icon:hover{ background: rgba(216,168,106,.25); transform: translateY(-50%) scale(1.08); }
 .nav-icon:disabled{ opacity: .25; pointer-events: none; }
-.nav-prev{ left: clamp(10px, 3vw, 32px); }
-.nav-next{ right: clamp(10px, 3vw, 32px); }
+.nav-prev{ left: max(clamp(10px, 3vw, 32px), env(safe-area-inset-left)); }
+.nav-next{ right: max(clamp(10px, 3vw, 32px), env(safe-area-inset-right)); }
 
 /* Dots */
 .dots{
-  position: fixed; bottom: 26px; left: 50%; transform: translateX(-50%);
+  position: fixed; left: 50%; transform: translateX(-50%);
+  bottom: max(26px, calc(env(safe-area-inset-bottom) + 14px));
   display: flex; gap: 10px; z-index: 5;
 }
 .dot{
@@ -247,7 +268,9 @@ button{ font-family: inherit; cursor: pointer; }
 
 /* Music toggle */
 .music-toggle{
-  position: fixed; top: 24px; right: 24px;
+  position: fixed;
+  top: max(24px, calc(env(safe-area-inset-top) + 10px));
+  right: max(24px, calc(env(safe-area-inset-right) + 12px));
   width: 46px; height: 46px; border-radius: 50%;
   border: 1px solid rgba(240,217,181,.35);
   background: rgba(18,33,59,.55);
@@ -264,3 +287,40 @@ button{ font-family: inherit; cursor: pointer; }
 
 /* Final slide special styling */
 .slide.final .letter p{ font-size: clamp(30px, 4vw, 46px); }
+
+/* =========================================================
+   LANDSCAPE (short viewport height, e.g. phone rotated)
+   ========================================================= */
+@media (orientation: landscape) and (max-height: 520px){
+  .slide{
+    padding: 10px clamp(60px, 9vw, 100px);
+    gap: clamp(14px, 3vw, 26px);
+    align-items: center;
+    overflow-y: auto;
+  }
+  .polaroid{
+    max-width: min(24vw, 170px);
+    padding: 8px 8px 28px 8px;
+  }
+  .polaroid .caption{ font-size: 13px; bottom: 6px; }
+  .washi{ width: 46px; height: 18px; top: -9px; }
+  .letter{ max-width: 54vw; }
+  .letter .heading{ font-size: 10px; letter-spacing: 1.5px; margin-bottom: 4px; }
+  .letter p{ font-size: clamp(15px, 3.6vh, 22px); line-height: 1.25; }
+  .slide.final .letter p{ font-size: clamp(20px, 4.4vh, 28px); }
+
+  .nav-icon{ width: 36px; height: 36px; }
+  .nav-icon svg{ width: 15px; height: 15px; }
+
+  .dots{ bottom: max(8px, env(safe-area-inset-bottom)); }
+
+  .music-toggle{
+    width: 38px; height: 38px;
+    top: max(10px, env(safe-area-inset-top));
+  }
+  .music-toggle svg{ width: 16px; height: 16px; }
+
+  #envelope-screen{ gap: 12px; }
+  .envelope{ width: 210px; height: 142px; }
+  .envelope-hint{ font-size: 17px; }
+}
