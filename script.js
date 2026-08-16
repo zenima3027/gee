@@ -9,13 +9,13 @@ const SLIDES = [
     text: "Happy birthday to the most rithu ahhh person in the entire fcking world. I love you so much and I hope you have the best birthday ever. Too bad I can`t be there to celebrate with you but I hope you have a great day and I hope you get everything you want. I love you so much and I hope you have the best birthday ever. Too bad I can`t be there to celebrate with you but I hope you have aa bom ahh day and khatraaaaaa bed rot garnu paossss hehee, if i were to there with you moh ni hunthiyoooo tara too baddd hehehee"
   },
   {
-    photo: "assets/photos/PHOTO2.jpeg",
+    photo: "assets/photos/1000119605.jpg",
     caption: "MY RITHU KWEEN",
     heading: "I MISS YOU FATTYY",
     text: "Days we spent being so rithu and funny(only me hai tara not u, u r learning tara time cha u funny hunu till then i iwll carry us ni dw), I miss you so much and I hope that no one takes this day away from you. I hope you have a bom day even tho i am not there tara Garima don ko taaa patiiii niii haiiii"
   },
   {
-    photo: "assets/photos/1000119605.jpg",
+    photo: "assets/photos/PHOTO2.jpeg",
     caption: "<3",
     heading: "BEING RITHU IS WHAT MAKES US, US heheehehe",
     text: "I wish i could just spend all my days with you being rithu and just being us babe, maybe someday we will tara till then ig we gotta be nerfed down yesari naiiiii dukha cha tara garima is such a bom girlfriend bhai halcha , all we need is each other and we will continue being this bom rithu thing we got for ourselves heehhee, someday maybee we will be telling our jr versions how rithu our dates used to be and omg they will have the best rolemodels for loving someone , specially having soemone like youuu omg lovergirlll beat koo, they will look at us with utter disgust tbh , just imagine buro ahhh ppl being lovey dovey toooo bad they just gotta bear with it"
